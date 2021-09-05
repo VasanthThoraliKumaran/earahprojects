@@ -1,31 +1,88 @@
 //must override custom fonts with !important to get work
 
 @font-face {
-    font-family: '-Thin';
-    src: url(~@/assets/fonts/montserrat/Montserrat-Thin.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Montserrat-Medium';
-    src: url(~@/assets/fonts/montserrat/Montserrat-Medium.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Montserrat-Regular';
-    src: url(~@/assets/fonts/montserrat/Montserrat-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Montserrat-Black';
-    src: url(~@/assets/fonts/montserrat/Montserrat-Black.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Montserrat-ExtraBold';
-    src: url(~@/assets/fonts/montserrat/Montserrat-ExtraBold.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Montserrat-Bold';
-    src: url(~@/assets/fonts/montserrat/Montserrat-Bold.ttf);
-  }
+  font-family: 'NotoSansJP-Thin';
+  src: url(~@/assets/fonts/noto-sans-jp/NotoSansJP-Thin.otf);
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Medium';
+  src: url(~@/assets/fonts/noto-sans-jp/NotoSansJP-Medium.otf);
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Regular';
+  src: url(~@/assets/fonts/noto-sans-jp/NotoSansJP-Regular.otf);
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Black';
+  src: url(~@/assets/fonts/noto-sans-jp/NotoSansJP-Black.otf);
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Light';
+  src: url(~@/assets/fonts/noto-sans-jp/NotoSansJP-Light.otf);
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Bold';
+  src: url(~@/assets/fonts/noto-sans-jp/NotoSansJP-Bold.otf);
+}
+
+//spartan
+
+@font-face {
+  font-family: 'Spartan-Thin';
+  src: url(~@/assets/fonts/spartan/Spartan-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'Spartan-Medium';
+  src: url(~@/assets/fonts/spartan/Spartan-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Spartan-Regular';
+  src: url(~@/assets/fonts/spartan/Spartan-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Spartan-Black';
+  src: url(~@/assets/fonts/spartan/Spartan-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Spartan-Light';
+  src: url(~@/assets/fonts/spartan/Spartan-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Spartan-Bold';
+  src: url(~@/assets/fonts/spartan/Spartan-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'NovaSlim-Regular';
+  src: url(~@/assets/fonts/nova-slim/NovaSlim-Regular.ttf);
+}
+
+.notoSansJP-regular {
+  font-family: 'NotoSansJP-Regular' !important;
+}
+
+.notoSansJP-bold {
+  font-family: 'NotoSansJP-Bold' !important;
+}
+
+.spartan-regular {
+  font-family: 'Spartan-Regular' !important;
+}
+
+.spartan-bold {
+  font-family: 'Spartan-Bold' !important;
+}
+
+.novaSlim-regular {
+  font-family: 'NovaSlim-Regular' !important;
+}
