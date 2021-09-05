@@ -28,7 +28,7 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "/src/scss/global.scss";
+@import "/src/scss/globals.scss";
 @import "/src/scss/variables.scss";
 @import "/src/scss/fonts.scss";
 #app {

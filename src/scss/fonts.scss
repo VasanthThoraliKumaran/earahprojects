@@ -1,1 +1,31 @@
 //must override custom fonts with !important to get work
+
+@font-face {
+    font-family: '-Thin';
+    src: url(~@/assets/fonts/montserrat/Montserrat-Thin.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(~@/assets/fonts/montserrat/Montserrat-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(~@/assets/fonts/montserrat/Montserrat-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-Black';
+    src: url(~@/assets/fonts/montserrat/Montserrat-Black.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url(~@/assets/fonts/montserrat/Montserrat-ExtraBold.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(~@/assets/fonts/montserrat/Montserrat-Bold.ttf);
+  }
