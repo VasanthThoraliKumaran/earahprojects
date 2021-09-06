@@ -36,13 +36,18 @@
       </v-btn-toggle>
     </v-app-bar>
 
-    <v-card elevation="0" class="fill-height" color="primary" dark flat tile>
+    <v-card elevation="0" height="700" color="primary" dark flat tile>
       <v-window v-model="onboarding">
         <v-window-item v-for="n in length" :key="`card-${n}`">
-          <v-card class="transparent" height="600">
+          <v-card class="transparent">
             <v-row class="fill-height max-width" align="center" justify="center">
               <v-col cols="6">
-                <v-img :src="require(`@/assets/images/${homeData.banner.image}`)"> </v-img>
+                <v-img
+                  :src="require(`@/assets/images/${homeData.banner.image}`)"
+                  :lazy-src="require(`@/assets/images/${homeData.banner.image}`)"
+                  height="600"
+                >
+                </v-img>
               </v-col>
               <v-col>
                 <v-card elevation="0" class="transparent pl-10" height="500">
@@ -81,6 +86,8 @@
         </v-item-group>
       </v-card-actions>
     </v-card>
+    <about></about>
+    <project></project>
   </div>
 </template>
 <script lang="ts">
@@ -88,7 +95,14 @@ import { appService } from '@/app.service';
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { navBarData, homeData } from '../data-mappings/home.data';
-@Component({})
+import About from './About.vue';
+import Project from './Project.vue';
+@Component({
+  components: {
+    About,
+    Project,
+  },
+})
 export default class Home extends Vue {
   onboarding = 0;
   length = 5;
