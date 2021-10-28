@@ -1,14 +1,14 @@
 <template>
   <v-app id="app">
     <v-main>
-      <router-view />
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { appService } from "./app.service";
+import Vue from 'vue';
+import { appService } from './app.service';
 import Component from 'vue-class-component';
 
 @Component({})
@@ -27,10 +27,13 @@ export default class App extends Vue {
 }
 </script>
 
+<style lang="scss">
+@import '@/scss/variables.scss';
+@import '@/scss/fonts.scss';
+@import '@/scss/globals.scss';
+</style>
+
 <style lang="scss" scoped>
-@import "/src/scss/globals.scss";
-@import "/src/scss/variables.scss";
-@import "/src/scss/fonts.scss";
 #app {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;

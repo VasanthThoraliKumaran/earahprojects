@@ -8,7 +8,7 @@
         </v-card-text>
       </v-card>
 
-      <v-sheet width="90%" class="primary mt-10 mb-10 rounded-lg">
+      <v-sheet width="90%" class="primary mb-5 mt-5 mb-sm-10 mt-sm-10 rounded-lg">
         <div v-for="(company, key, index) in aboutData.companies" :key="index">
           <poster
             :posterImage="company.image"
@@ -35,9 +35,10 @@ import { aboutData } from '../data-mappings/about.data';
 })
 export default class About extends Vue {
   aboutData = aboutData;
+
+  
 }
 </script>
 <style lang="scss" scoped>
-@import '@/scss/fonts.scss';
-@import '@/scss/globals.scss';
+
 </style>
