@@ -1,6 +1,6 @@
 <template>
-  <div id="Home" class="max-height max-width">
-    <v-app-bar class="primary nav" elevate-on-scroll app>
+  <div id="Home" ref="main" class="max-height max-width">
+    <v-app-bar elevation="10" :dark="!onTop" :color="onTop ? 'primary' : ''" class="nav" elevate-on-scroll app>
       <v-row
         dense
         no-gutters
@@ -58,25 +58,24 @@
       <v-window v-model="onboarding">
         <v-window-item v-for="n in length" :key="`card-${n}`">
           <v-card class="transparent primary">
-            <v-row class="fill-height max-width" align="center" justify="center">
-              <v-col cols="12" sm="6">
+            <v-row class="max-width" align="center" justify="center">
+              <v-col cols="12" sm="auto">
                 <v-img
                   :src="require(`@/assets/images/${homeData.banner.image}`)"
                   :lazy-src="require(`@/assets/images/${homeData.banner.image}`)"
-                  max-height="600"
-                  height="600"
+                  max-width="600"
                 >
                 </v-img>
               </v-col>
               <v-col>
-                <v-card elevation="0" class="transparent pl-10">
+                <v-card elevation="0" class="text-center transparent pl-10">
                   <v-card-text class="text-sm-h2 text-h4 notoSansJP-bold black--text text-uppercase">{{
                     navBarData.companyName
                   }}</v-card-text>
-                  <v-card-text class="text-sm-h4 text-h6 spartan-regular black--text"
-                    >{{ parsedTagLine.phrase1 }}
-                    <div class="spartan-bold">{{ parsedTagLine.phrase2 }}</div></v-card-text
-                  >
+                  <v-card-text
+                    class="text-sm-h4 text-h6 spartan-bold black--text"
+                    v-html="homeData.banner.tagLine"
+                  ></v-card-text>
 
                   <v-card-text class="spartan-regular black--text mt-sm-5 text-caption text-sm-h6">
                     {{ homeData.banner.shortDescription }}
@@ -112,14 +111,17 @@
     <about id="About"></about>
     <service id="OurServices"></service>
     <project id="Projects"></project>
+    <contact id="Contact"></contact>
   </div>
 </template>
 <script lang="ts">
 import { appService } from '@/app.service';
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { Ref } from 'vue-property-decorator';
 import { navBarData, homeData } from '../data-mappings/home.data';
 import About from './About.vue';
+import Contact from './Contact.vue';
 import Project from './Project.vue';
 import Service from './Service.vue';
 @Component({
@@ -127,6 +129,7 @@ import Service from './Service.vue';
     About,
     Project,
     Service,
+    Contact,
   },
 })
 export default class Home extends Vue {
@@ -135,12 +138,19 @@ export default class Home extends Vue {
   navBarData = navBarData;
   homeData = homeData;
   drawer = false;
+  onTop = true;
 
   interval: any;
   timeout = 3000;
 
+  @Ref()
+  main!: HTMLElement;
+
   mounted() {
     this.startWindowSlider();
+    window.addEventListener('scroll', () => {
+      this.onTop = window.scrollY == 0;
+    });
   }
 
   startWindowSlider() {
@@ -170,20 +180,11 @@ export default class Home extends Vue {
     return appService.getDarkTheme();
   }
 
-  get parsedTagLine() {
-    const tagLineIntoPhrases = homeData.banner.tagLine.split(' ');
-    const length = tagLineIntoPhrases.length;
-    return {
-      phrase1: tagLineIntoPhrases.splice(0, length / 2).join(' '),
-      phrase2: tagLineIntoPhrases.splice(length / 2 - 2, length).join(' '),
-    };
-  }
-
   async goTo(route: string) {
     console.log(route);
     const res = await this.$vuetify.goTo('#' + route.split(' ').join(''), {
       duration: 700,
-      offset: 0,
+      offset: -10,
       easing: 'easeInOutCubic',
     });
 
@@ -193,9 +194,15 @@ export default class Home extends Vue {
   switchTheme() {
     appService.switchTheme();
   }
+
+  onScroll(e: any) {
+    console.log('scrolled: ', e);
+  }
 }
 </script>
 <style lang="scss" scoped>
+@import '@/scss/fonts.scss';
+@import '@/scss/globals.scss';
 .nav-btn-bg-none {
   ::v-deep .v-btn:before {
     background-color: transparent !important;

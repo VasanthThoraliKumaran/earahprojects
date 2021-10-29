@@ -1,52 +1,46 @@
 <template>
   <div class="primary">
-    <custom-header class="primary" title="Projects"></custom-header>
-    <v-row no-gutters align="center" justify="center" dense>
-      <v-col cols="2" v-if="!isMobile" class="pl-5 pr-5">
-        <v-card tile elevation="0" class="transparent d-flex justify-center align-center max-width max-height">
-          <v-btn-toggle
-            mandatory
-            tile
-            group
-            class="overflow-hidden nav-btn-bg-none max-width d-flex flex-column justify-center"
-          >
-            <v-btn
-              text
-              depressed
-              :value="option"
-              v-for="(option, i) in companies"
-              :key="i"
-              @click="gallerySize(option)"
-              class="text-sm-caption text-uppercase spartan-regular"
-              active-class="text-decoration-underline rounded-lg"
-            >
-              {{ option }}
-            </v-btn>
-          </v-btn-toggle>
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-sheet class="secondary pa-2 d-flex justify-center align-center overflow-auto" max-height="580" height="600">
-          <v-card ref="gallery" tile elevation="0" class="transparent max-height max-width overflow-auto scroll">
-            <v-row no-gutters dense class="max-width">
-              <v-col v-for="j in currentGallerySize" :key="j" class="d-flex child-flex ma-1 red">
-                <v-img
-                  @click="viewImage(`https://picsum.photos/${random().w}/${random().h}`)"
-                  :src="`https://picsum.photos/${random().w}/${random().h}`"
-                  class="grey lighten-2"
-                >
-                  <template v-slot:placeholder>
-                    <v-row class="fill-height ma-0" align="center" justify="center">
-                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                    </v-row>
-                  </template>
-                </v-img>
-              </v-col>
-            </v-row>
-          </v-card>
-        </v-sheet>
-      </v-col>
-    </v-row>
+    <custom-header :size="100" class="primary black--text" title="Projects"></custom-header>
+
+    <v-toolbar dark>
+      <v-btn-toggle mandatory tile group class="overflow-hidden nav-btn-bg-none max-width justify-center">
+        <v-btn
+          text
+          depressed
+          :value="option"
+          v-for="(option, i) in companies"
+          :key="i"
+          @click="gallerySize(option)"
+          class="text-sm-caption text-uppercase spartan-regular"
+          active-class="text-decoration-underline rounded-lg primary--text"
+        >
+          {{ option }}
+        </v-btn>
+      </v-btn-toggle>
+    </v-toolbar>
+
+    <v-sheet height="500" class="primary pa-2 d-flex justify-center align-center overflow-auto">
+      <v-card ref="gallery" tile elevation="0" class="transparent max-height max-width overflow-auto scroll">
+        <v-row no-gutters dense>
+          <v-col v-for="j in currentGallerySize" :key="j" class="d-flex child-flex ma-1">
+            <v-card dark class="pa-2">
+              <v-img
+                aspect-ratio
+                @click="viewImage(`https://picsum.photos/${random().w}/${random().h}`)"
+                src="https://picsum.photos/id/100/200"
+                class="grey lighten-2"
+              >
+                <template v-slot:placeholder>
+                  <v-row class="fill-height ma-0" align="center" justify="center">
+                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                  </v-row>
+                </template>
+              </v-img>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-sheet>
 
     <v-dialog v-model="viewImageDialog" class="primary">
       <v-toolbar class="primary">
@@ -73,8 +67,8 @@ export default class Project extends Vue {
   @Ref()
   gallery!: HTMLElement;
 
-  eerahHomeImagesLength = 15;
-  eerahZoneImagesLength = 25;
+  eerahHomeImagesLength = 5;
+  eerahZoneImagesLength = 5;
   viewImageDialog = false;
 
   currentGallerySize = 0;

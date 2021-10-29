@@ -1,7 +1,7 @@
 export const aboutData = {
   aboutEerahProjects: [
-    'TEAM EERAAH is known for quality standards, On time completion  and delivery. Eerah Projects  is a construction company started this early year runned by an highly qualified and experienced professionals with knack of industrial experience.',
-    'We are experts in House and Pre-Engineered Steel Building Construction with exceptional quality. We are known for our quality standards, On time completion  and delivery. When we say our quality is of high enough, We really mean it.',
+    `<b>TEAM EARAH</b> is known for quality standards, On time completion  and delivery. Eerah Projects  is a construction company started this early year runned by an highly qualified and experienced professionals with knack of industrial experience.`,
+    'We are experts in <b>House and Pre-Engineered Steel Building Construction</b> with exceptional quality. We are known for our quality standards, On time completion  and delivery. When we say our quality is of high enough, We really mean it.',
   ],
 
   companies: {

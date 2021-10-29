@@ -1,5 +1,5 @@
 <template>
-  <v-sheet height="150" max-height="200" class="d-flex align-center justify-center">
+  <v-sheet :height="size" dark class="d-flex align-center justify-center pt-3">
     <v-row class="max-height" no-gutters dense align="center" justify="center">
       <span class="text-sm-h3 text-h4 pa-2 spartan-bold text-uppercase">{{ title }}</span>
     </v-row>
@@ -13,6 +13,9 @@ import { Prop } from 'vue-property-decorator';
 export default class CustomHeader extends Vue {
   @Prop()
   title!: string;
+
+  @Prop()
+  size!: string | number;
 }
 </script>
 <style lang="scss" scoped>

@@ -1,42 +1,50 @@
 <template>
   <div class="ma-5">
     <v-row no-gutters dense class="max-width">
-      <v-col cols="12" sm="5" v-if="!invert || isMobile">
+      <v-col v-if="!invert || isMobile" class="pa-3">
         <slot name="posterImage">
           <v-img
             v-if="posterImage"
             :src="require(`@/assets/images/${posterImage}`)"
             :lazy-src="require(`@/assets/images/${posterImage}`)"
-            contain
+            max-width="600"
+            aspect-ratio
           >
           </v-img>
         </slot>
       </v-col>
       <v-col>
         <slot name="posterContent">
-          <v-card elevation="0" class="transparent pa-10 pl-sm-10" v-if="posterTitle && descriptions">
-            <v-card-text class="text-sm-h2 notoSansJP-bold black--text text-uppercase">{{ posterTitle }}</v-card-text>
+          <v-card
+            light
+            elevation="0"
+            class="transparent pt-4 pl-sm-10 d-flex flex-column align-center rounded-lg"
+            v-if="posterTitle && descriptions"
+          >
+            <v-card-text class="black--text text-sm-h2 text-center notoSansJP-bold text-uppercase">{{ posterTitle }}</v-card-text>
 
             <v-card-text
               v-for="desc in descriptions"
               :key="desc"
-              class="text-caption text-sm-body-1 spartan-regular black--text mt-sm-5"
+              class="text-caption text-sm-body-1 spartan-regular mt-sm-5"
             >
               {{ desc }}
             </v-card-text>
 
-            <v-card-actions class="mt-sm-10 pl-sm-4">
+            <v-card-actions class="mt-2">
               <v-btn class="black accent--text text-capitalize text-caption" rounded outlined>explore more</v-btn>
             </v-card-actions>
           </v-card>
         </slot>
       </v-col>
-      <v-col cols="12" sm="5" v-if="!isMobile && invert">
+      <v-col v-if="!isMobile && invert" class="pa-3">
         <slot name="posterImage">
-          <v-img v-if="posterImage"
+          <v-img
+            v-if="posterImage"
             :src="require(`@/assets/images/${posterImage}`)"
             :lazy-src="require(`@/assets/images/${posterImage}`)"
             aspect-ratio
+            max-width="600"
           >
           </v-img>
         </slot>

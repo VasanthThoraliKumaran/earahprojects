@@ -1,6 +1,6 @@
 export const serviceData = {
-  allServices: {
-    eerahHomes: {
+  companies: {
+    earahHomes: {
       thumbnail:
         'https://assets-news.housing.com/news/wp-content/uploads/2020/04/09110943/How-to-go-ahead-with-house-construction-while-maintaining-the-cost-FB-1200x700-compressed.jpg',
       services: {
@@ -22,16 +22,26 @@ export const serviceData = {
         },
 
         4: {
-          thumbnail: 'https://cdn-icons-png.flaticon.com/512/1837/1837519.png',
+          thumbnail:
+            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
           service: 'Landscaping',
         },
         5: {
           thumbnail: 'https://cdn-icons-png.flaticon.com/512/3564/3564854.png',
           service: 'Cost Estimation',
         },
+        6: {
+          thumbnail:
+            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
+          service: 'Landscaping',
+        },
+        7: {
+          thumbnail: 'https://cdn-icons-png.flaticon.com/512/3564/3564854.png',
+          service: 'Cost Estimation',
+        },
       },
     },
-    eerahZone: {
+    earahZone: {
       thumbnail: 'https://www.americanwarehouses.com/hubfs/Blog%20Images/AW-Blog-What-Is-Public-Warehousing.jpg',
       services: {
         0: {
@@ -52,10 +62,20 @@ export const serviceData = {
         },
 
         4: {
-          thumbnail: 'https://cdn-icons-png.flaticon.com/512/1837/1837519.png',
+          thumbnail:
+            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
           service: 'Landscaping',
         },
         5: {
+          thumbnail: 'https://cdn-icons-png.flaticon.com/512/3564/3564854.png',
+          service: 'Cost Estimation',
+        },
+        6: {
+          thumbnail:
+            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
+          service: 'Landscaping',
+        },
+        7: {
           thumbnail: 'https://cdn-icons-png.flaticon.com/512/3564/3564854.png',
           service: 'Cost Estimation',
         },

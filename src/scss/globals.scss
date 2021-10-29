@@ -1,15 +1,18 @@
 * {
   box-sizing: border-box;
-  transition: all 0.05s linear;
+  transition: all 0.03s linear;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 html,
 body {
-  padding: 0 !important;
-  margin: 0 !important;
-  @extend .max-height;
-  @extend .max-width;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  overflow: auto !important;
 }
 
 .max-width {
@@ -20,4 +23,11 @@ body {
 .max-height {
   height: 100% !important;
   max-height: 100% !important;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
 }

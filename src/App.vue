@@ -35,11 +35,9 @@ export default class App extends Vue {
 
 <style lang="scss" scoped>
 #app {
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  height: 100% !important;
-  min-height: 100% !important;
-  min-width: 300px !important;
+  min-height: 100%;
+  min-width: 300px;
   scroll-behavior: smooth;
 }
 </style>

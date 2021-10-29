@@ -14,4 +14,7 @@ export default new Vuetify({
       dark: darkTheme,
     },
   },
+  breakpoint: {
+    mobileBreakpoint: 600,
+  },
 });

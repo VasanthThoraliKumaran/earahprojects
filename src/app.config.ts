@@ -2,7 +2,7 @@ import { colors } from 'vuetify/lib';
 import { VuetifyThemeVariant } from 'vuetify/types/services/theme';
 
 export const appConfig = {
-  title: 'EerahZone',
+  title: 'EarahProjects',
   version: process.env.VERSION,
   versionCode: process.env.VERSION_CODE,
   port: {
