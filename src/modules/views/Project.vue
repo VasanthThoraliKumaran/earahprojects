@@ -19,7 +19,7 @@
       </v-btn-toggle>
     </v-toolbar>
 
-    <v-sheet height="500" class="primary pa-2 d-flex justify-center align-center overflow-auto">
+    <v-sheet height="auto" max-heght="600" class="primary pa-5 d-flex justify-center align-center overflow-auto">
       <v-card ref="gallery" tile elevation="0" class="transparent max-height max-width overflow-auto scroll">
         <v-row no-gutters dense>
           <v-col v-for="j in currentGallerySize" :key="j" class="d-flex child-flex ma-1">

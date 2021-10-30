@@ -72,22 +72,21 @@
                   <v-card-text class="text-sm-h2 text-h4 notoSansJP-bold black--text text-uppercase">{{
                     navBarData.companyName
                   }}</v-card-text>
-                  <v-card-text
-                    class="text-sm-h4 text-h6 spartan-bold black--text"
-                    v-html="homeData.banner.tagLine"
-                  ></v-card-text>
+                  <v-card-text class="text-sm-h6 text-body-2 spartan-bold black--text">{{
+                    homeData.banner.tagLine
+                  }}</v-card-text>
 
                   <v-card-text class="spartan-regular black--text mt-sm-5 text-caption text-sm-h6">
                     {{ homeData.banner.shortDescription }}
                   </v-card-text>
 
-                  <v-row no-gutters dense align="center" class="pa-1">
-                    <v-col cols="auto" class="mr-3 mb-3">
+                  <v-row no-gutters dense justify="center" align="center" class="pa-1">
+                    <v-col cols="auto" class="mx-2">
                       <v-btn class="text-caption" light rounded outlined>Explore more</v-btn>
                     </v-col>
-                    <v-col class="mr-3 mb-3">
+                    <v-col cols="auto">
                       <v-btn class="text-caption" light rounded outlined>
-                        <v-icon class="ma-1" small>mdi-phone-classic</v-icon>Schedule a meeting</v-btn
+                        <v-icon small>mdi-phone-classic</v-icon>Schedule a meeting</v-btn
                       >
                     </v-col>
                   </v-row>
@@ -111,25 +110,28 @@
     <about id="About"></about>
     <service id="OurServices"></service>
     <project id="Projects"></project>
+    <team id="OurTeam"></team>
     <contact id="Contact"></contact>
   </div>
 </template>
 <script lang="ts">
-import { appService } from '@/app.service';
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Ref } from 'vue-property-decorator';
+import { appService } from '../../app.service';
 import { navBarData, homeData } from '../data-mappings/home.data';
 import About from './About.vue';
 import Contact from './Contact.vue';
 import Project from './Project.vue';
 import Service from './Service.vue';
+import Team from './Team.vue';
 @Component({
   components: {
     About,
     Project,
     Service,
     Contact,
+    Team,
   },
 })
 export default class Home extends Vue {
@@ -145,6 +147,7 @@ export default class Home extends Vue {
 
   @Ref()
   main!: HTMLElement;
+  $vuetify: any;
 
   mounted() {
     this.startWindowSlider();
@@ -183,8 +186,7 @@ export default class Home extends Vue {
   async goTo(route: string) {
     console.log(route);
     const res = await this.$vuetify.goTo('#' + route.split(' ').join(''), {
-      duration: 700,
-      offset: -10,
+      duration: 1000,
       easing: 'easeInOutCubic',
     });
 
