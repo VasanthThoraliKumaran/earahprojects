@@ -23,7 +23,7 @@ export const serviceData = {
 
         4: {
           thumbnail:
-            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
+            'https://cdn-icons-png.flaticon.com/512/2204/2204056.png',
           service: 'Landscaping',
         },
         5: {
@@ -32,7 +32,7 @@ export const serviceData = {
         },
         6: {
           thumbnail:
-            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
+            'https://cdn-icons-png.flaticon.com/512/2204/2204056.png',
           service: 'Landscaping',
         },
         7: {
@@ -63,7 +63,7 @@ export const serviceData = {
 
         4: {
           thumbnail:
-            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
+            'https://cdn-icons-png.flaticon.com/512/2204/2204056.png',
           service: 'Landscaping',
         },
         5: {
@@ -72,7 +72,7 @@ export const serviceData = {
         },
         6: {
           thumbnail:
-            'https://cdn-icons.flaticon.com/png/512/2115/premium/2115947.png?token=exp=1635518811~hmac=44052d6ef69c2a68d335ccead860b001',
+            'https://cdn-icons-png.flaticon.com/512/2204/2204056.png',
           service: 'Landscaping',
         },
         7: {

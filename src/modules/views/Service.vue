@@ -23,6 +23,13 @@
                 voluptatem rem obcaecati eum necessitatibus aperiam quaerat. Labore pariatur quasi mollitia, non unde
                 assumenda eius ratione harum totam excepturi officiis.
               </v-card-text>
+              <v-card-text
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque tempore ea facere molestias non,
+                praesentium assumenda incidunt odit ipsum explicabo saepe perspiciatis voluptatibus in fugiat vitae,
+                beatae impedit dignissimos aperiam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel earum,
+                voluptatem rem obcaecati eum necessitatibus aperiam quaerat. Labore pariatur quasi mollitia, non unde
+                assumenda eius ratione harum totam excepturi officiis.
+              </v-card-text>
             </v-card>
           </v-col>
           <v-col>
