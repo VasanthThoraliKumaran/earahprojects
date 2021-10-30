@@ -37,7 +37,7 @@ export default class App extends Vue {
 #app {
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
-  min-width: 300px;
+  min-width: 350px;
   scroll-behavior: smooth;
 }
 </style>
