@@ -9,13 +9,13 @@
           elevation="10"
           class="text-center max-height d-flex flex-column justify-center align-center pa-3 rounded-lg"
         >
-          <v-avatar size="80" class="mt-5">
+          <v-avatar size="150" class="mt-5">
             <v-img src="https://cdn-icons-png.flaticon.com/512/147/147140.png"></v-img>
           </v-avatar>
 
-          <v-card-text>Lorem, ipsum dolor</v-card-text>
+          <v-card-text class="text-body-1">Lorem, ipsum dolor</v-card-text>
 
-          <v-card-text class="text-justify"
+          <v-card-text class="text-justify text-body-2"
             >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis est pariatur ea deleniti unde quasi
             amet nulla ad consectetur ab rerum, minima.</v-card-text
           >

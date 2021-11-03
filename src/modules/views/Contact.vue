@@ -16,7 +16,6 @@
         <span class="mx-4" dark link><v-icon>mdi-gmail</v-icon>earahprojects@gmail.com</span>
       </v-col>
     </v-row>
-
     <div class="text-center d-flex flex-column flex-sm-row mt-5 max-width">
       <v-row dense no-gutters class="max-width">
         <v-col v-for="(link, key) in contactData" :key="key">

@@ -26,7 +26,7 @@
             <v-card-text
               v-for="desc in descriptions"
               :key="desc"
-              class="text-caption text-sm-body-1 spartan-regular mt-sm-5"
+              class="text-caption text-sm-body-1 spartan-regular mt-sm-5 black--text"
             >
               {{ desc }}
             </v-card-text>

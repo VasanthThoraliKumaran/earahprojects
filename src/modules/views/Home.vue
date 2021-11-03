@@ -28,7 +28,7 @@
           :value="option"
           v-for="(option, i) in navBarData.navItems"
           :key="i"
-          class="text-sm-caption text-uppercase notoSansJP-regular font-weight-thin"
+          class="text-sm-body-1 text-uppercase notoSansJP-regular font-weight-thin mx-1"
           active-class="text-decoration-underline rounded-lg"
           @click="goTo(option)"
         >
